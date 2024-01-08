@@ -5,6 +5,7 @@ using UnityEngine;
 public class MessageSprite : MonoBehaviour
 {
     public Sprite message;
+    public GameObject gameManager;
     SpriteRenderer sp;
 
     // Start is called before the first frame update
@@ -12,5 +13,14 @@ public class MessageSprite : MonoBehaviour
     {
         sp = gameObject.GetComponent<SpriteRenderer>();
         sp.sprite = message;
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //send to gameManager
+        gameManager.GetComponent<stats>().CollectMessage(message);
+        //delete object
+        Destroy(this.gameObject);
     }
 }
