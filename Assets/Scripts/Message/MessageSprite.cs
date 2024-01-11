@@ -20,7 +20,7 @@ public class MessageSprite : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //send to gameManager
-        gameManager.GetComponent<stats>().CollectMessage(message);
+        gameManager.GetComponent<Stats>().CollectMessage(message);
         //delete object
         Destroy(this.gameObject);
     }

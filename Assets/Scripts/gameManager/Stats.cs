@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class stats : MonoBehaviour
+public class Stats : MonoBehaviour
 {
     //all relevant information that needs to be tracked
     public int playerHealth = 100;
@@ -25,6 +25,14 @@ public class stats : MonoBehaviour
         //put the message on UI
         imagePlaceholder.GetComponent<Image>().sprite = sprite;
 
+    }
+
+    public void RemoveMessage()
+    {
+        //set that player has message to show
+        hasMessage = false;
+        //hide UI
+        imagePlaceholder.SetActive(false);
     }
 
 }
