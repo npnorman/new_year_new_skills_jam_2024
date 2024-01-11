@@ -7,6 +7,7 @@ public class stats : MonoBehaviour
 {
     //all relevant information that needs to be tracked
     public int playerHealth = 100;
+    public int score = 0;
     public bool hasMessage = false;
     public GameObject imagePlaceholder;
 

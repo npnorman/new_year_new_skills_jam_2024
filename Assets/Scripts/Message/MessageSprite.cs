@@ -5,13 +5,14 @@ using UnityEngine;
 public class MessageSprite : MonoBehaviour
 {
     public Sprite message;
-    public GameObject gameManager;
+    GameObject gameManager;
     SpriteRenderer sp;
 
     // Start is called before the first frame update
     void Start()
     {
         sp = gameObject.GetComponent<SpriteRenderer>();
+        gameManager = GameObject.FindGameObjectWithTag("gameManager");
         sp.sprite = message;
 
     }
