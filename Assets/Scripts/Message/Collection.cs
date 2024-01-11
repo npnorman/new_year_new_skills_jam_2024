@@ -27,12 +27,16 @@ public class Collection : MonoBehaviour
             spawner.GetComponent<Spawner>().PullMessage();
         } else {
             //do nothing
+            Debug.Log("Incorrect");
         }
+
+        isCorrectCollector = false;
 
         //spawn next message
         spawner.GetComponent<Spawner>().Spawn();
         //has message is false
         //remove message from UI
         stats.RemoveMessage();
+
     }
 }
